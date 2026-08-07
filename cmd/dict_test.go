@@ -13,11 +13,17 @@ func TestDictCmd(t *testing.T) {
 
 	dictCmd.Run(dictCmd, []string{})
 
-	w.Close()
+	if err := w.Close(); err != nil {
+		t.Errorf("Failed to close pipe: %v", err)
+	}
+	
 	os.Stdout = old
 
 	var buf bytes.Buffer
-	buf.ReadFrom(r)
+
+	if _, err := buf.ReadFrom(r); err != nil {
+		t.Errorf("Failed to read buffer: %v", err)
+	}
 
 	expected := dictNotes
 	if buf.String() != expected {

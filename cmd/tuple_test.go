@@ -13,11 +13,17 @@ func TestTupleCmd(t *testing.T) {
 
 	tupleCmd.Run(tupleCmd, []string{})
 
-	w.Close()
+	if err := w.Close(); err != nil {
+		t.Errorf("Failed to close pipe: %v", err)
+	}
+	
 	os.Stdout = old
 
 	var buf bytes.Buffer
-	buf.ReadFrom(r)
+
+	if _, err := buf.ReadFrom(r); err != nil {
+		t.Errorf("Failed to read buffer: %v", err)
+	}
 
 	expected := tupleNotes
 	if buf.String() != expected {
