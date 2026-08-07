@@ -14,7 +14,7 @@ var (
 	Use: "loop",
 	Short: "...",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(loopNotes)
+		fmt.Print(loopNotes)
 	},
 }
 
