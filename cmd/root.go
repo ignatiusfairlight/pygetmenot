@@ -14,7 +14,7 @@ var (
 	codes with detailed explanation and code examples enough for you to understand 
 	and continue your work when you are stuck in writing any Python projects.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("I love Ricardo!")
+		fmt.Println("This is Pygetmenot. A terminal app to assist you in writing Python codes.")
 	},
 }
 
