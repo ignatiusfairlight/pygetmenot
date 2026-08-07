@@ -1,0 +1,1 @@
+Hello! This is Python's dictionary entry.
