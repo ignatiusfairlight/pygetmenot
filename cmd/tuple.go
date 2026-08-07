@@ -14,7 +14,7 @@ var (
 	Use: "tuple",
 	Short: "...",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Print(tupleNotes)
+		fmt.Println(tupleNotes)
 	},
 }
 

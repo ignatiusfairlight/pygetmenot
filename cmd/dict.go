@@ -14,7 +14,7 @@ var (
 	Use: "dict",
 	Short: "...",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Print(dictNotes)
+		fmt.Println(dictNotes)
 	},
 }
 

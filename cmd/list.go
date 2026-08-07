@@ -14,7 +14,7 @@ var (
 	Use: "list",
 	Short: "...",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Print(listNotes)
+		fmt.Println(listNotes)
 	},
 }
 
