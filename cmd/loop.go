@@ -14,7 +14,7 @@ var (
 	Use: "loop",
 	Short: "...",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Print("Praise Oroboros!")
+		fmt.Print(loopNotes)
 	},
 }
 

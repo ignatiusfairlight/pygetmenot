@@ -14,7 +14,7 @@ var (
 	Use: "list",
 	Short: "...",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Print("Welcome to Python's list. We are definitely not an array, ahahaha...")
+		fmt.Print(listNotes)
 	},
 }
 
