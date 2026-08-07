@@ -13,6 +13,6 @@ jobs:
             - run: go vet ./...
             - uses: golangci/golangci-lint-action@v6
               with:
-                version: v.2.12.2
+                version: v2.12.2
             - run: go test ./...
             - run: go build .
