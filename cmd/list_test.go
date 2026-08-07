@@ -6,12 +6,12 @@ import (
 	"testing"
 )
 
-func TestDictCmd(t *testing.T) {
+func TestListCmd(t *testing.T) {
 	old := os.Stdout
 	r, w, _ := os.Pipe()
 	os.Stdout = w
 
-	dictCmd.Run(dictCmd, []string{})
+	listCmd.Run(listCmd, []string{})
 
 	w.Close()
 	os.Stdout = old
@@ -19,8 +19,8 @@ func TestDictCmd(t *testing.T) {
 	var buf bytes.Buffer
 	buf.ReadFrom(r)
 
-	expected := dictNotes
+	expected := listNotes
 	if buf.String() != expected {
-		t.Errorf("Expected contents of dict.md, instead got %q", buf.String())
+		t.Errorf("Expected contents of list.md, instead got %q", buf.String())
 	}
 }
