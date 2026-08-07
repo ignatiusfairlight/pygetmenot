@@ -3,7 +3,11 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	_ "embed"
 )
+
+//go:embed notes/loop.md
+var loopNotes string
 
 var (
 	loopCmd = &cobra.Command{

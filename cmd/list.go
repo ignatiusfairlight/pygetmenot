@@ -3,7 +3,11 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	_ "embed"
 )
+
+//go:embed notes/list.md
+var listNotes string
 
 var (
 	listCmd = &cobra.Command{
