@@ -14,7 +14,7 @@ var (
 	Use: "tuple",
 	Short: "...",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("You can't change me!")
+		fmt.Print("You can't change me!")
 	},
 }
 
